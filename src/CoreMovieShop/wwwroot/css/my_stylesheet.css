@@ -1,0 +1,19 @@
+body {
+  margin: 3%;
+}
+.movie-box {
+  border: 1px solid lightgray;
+  padding: 0px;
+  margin: 1%;
+}
+.movie-box img {
+  width: 100%;
+  height: 260px;
+}
+.movie-box p {
+  text-align: center;
+  padding: 5%;
+}
+.movie-box:hover {
+  box-shadow: green 10px 10px inset;
+}

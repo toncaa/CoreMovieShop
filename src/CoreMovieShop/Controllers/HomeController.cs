@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using CoreMovieShop.Models;
 
 namespace CoreMovieShop.Controllers
 {
@@ -10,21 +11,18 @@ namespace CoreMovieShop.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
+            List<Movie> movies = new List<Movie>();
+            Movie m;
+            m = new Movie();
+            m.Title = "Batman:The Dark Knight";
+            m.Poster = "/images/b2.jpg";
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
+            for(int i=0;i<10;i++)
+            {
+                movies.Add(m);
+            }
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            return View(movies);
         }
 
         public IActionResult Error()
